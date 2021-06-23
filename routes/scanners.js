@@ -1,6 +1,8 @@
 const express = require('express')
 const multer = require("multer")
 const router = express.Router()
+const csv = require("csvtojson")
+
 
 //getting csv files
 router.get("/", function(req,res){
@@ -22,6 +24,10 @@ var upload = multer({storage: storage})
 router.post("/",upload.single("filename"),  function(req,res){
     var flieInfo = req.file
     res.send(flieInfo)
+    csv().fromFile(req.file.path)
+    .then(function(jsonObj){
+        console.log(jsonObj)
+    })
 })
 
 
