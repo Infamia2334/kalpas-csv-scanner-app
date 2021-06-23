@@ -1,0 +1,28 @@
+{
+  "name": "kalpas-csv-scanner-app",
+  "version": "1.0.0",
+  "description": "An API that takes a CSV file and pushes it to a mondoDB collection to perform CRUD on it",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Infamia2334/kalpas-csv-scanner-app.git"
+  },
+  "author": "Dipan Das",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Infamia2334/kalpas-csv-scanner-app/issues"
+  },
+  "homepage": "https://github.com/Infamia2334/kalpas-csv-scanner-app#readme",
+  "dependencies": {
+    "csv-parser": "^3.0.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.1",
+    "formidable": "^1.2.2",
+    "mongoose": "^5.12.14",
+    "multer": "^1.4.2"
+  }
+}
