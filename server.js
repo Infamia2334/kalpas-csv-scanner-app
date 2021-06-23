@@ -18,8 +18,8 @@ db.once("open", function(){
 const scannerRouter = require("./routes/scanners")
 app.use("/scanner", scannerRouter)
 
-const crudRouter = require("./routes/cruders")
-app.use("/cruder", crudRouter)
+// const crudRouter = require("./routes/cruders")
+// app.use("/cruder", crudRouter)
 
 let port = process.env.PORT;
 if (port == null || port == "") {
