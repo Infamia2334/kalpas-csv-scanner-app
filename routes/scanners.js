@@ -40,14 +40,10 @@ var upload = multer({storage: storage})
 router.post("/",upload.single("filename"),  function(req,res){
     var flieInfo = req.file
     res.send(flieInfo)
-    console.log(req.file.path)
+    // console.log(req.file.path)
     csv().fromFile(req.file.path)
     .then(function(jsonObj){
-        // console.log(jsonObj)
 
-        for(var x = 0; x< jsonObj; x++){
-
-        }
         Finance.insertMany(jsonObj)
     })
 
