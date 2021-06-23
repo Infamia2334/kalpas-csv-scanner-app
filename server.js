@@ -5,7 +5,8 @@ const app = express()
 const mongoose = require("mongoose")
 
 
-mongoose.connect(process.env.DB_URL,  {useNewUrlParser : true, useUnifiedTopology: true})
+
+// mongoose.set("useCreateIndex", true)
 const db = mongoose.connection
 db.on("error", function(err){
     console.log(err)
