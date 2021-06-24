@@ -8,6 +8,8 @@ const BioStats = require("../models/bioStats")
 
 
 //GET ALL DATA IN COLLECTION
+
+
 router.get("/", function(req,res){
     BioStats.find( function(err, found){
         if(!err){
@@ -49,7 +51,7 @@ router.post("/", function(req, res){
 
 
 //to delete everything in collection
-router.delete("/deleteAll", function(req, res){
+router.delete("/deleteAll",  function(req, res){
     BioStats.deleteMany(function(err){
         if(err){
             res.send(err)
@@ -60,7 +62,7 @@ router.delete("/deleteAll", function(req, res){
     })
 })
 
-router.delete("/deleteOne", function(req, res){
+router.delete("/deleteOne",  function(req, res){
     BioStats.deleteOne({Name: req.body.name} ,function(err){
         if(err){
             res.send(err)
@@ -71,7 +73,8 @@ router.delete("/deleteOne", function(req, res){
     })
 })
 
-router.put("/", function(req, res){
+//Updating documents
+router.put("/",  function(req, res){
     var objForUpdate = {
         Name: req.body.name,
         Sex: req.body.sex,

@@ -22,7 +22,7 @@ mongoose.connect("mongodb+srv://admin-dipan:Test123@appcluster.x7nob.mongodb.net
 const BioStats = require("../models/bioStats")
 //getting csv files
 router.get("/", function(req,res){
-    res.send("Hello world")
+    res.send("Welcome to the scanner API")
 })
 
 var storage = multer.diskStorage({
