@@ -1,6 +1,6 @@
 # kalpas-csv-scanner-app
 This documentation highlights the functioning of this app.
-
+All the postman collections are saved in the Resources folder, import them in your POSTMAN application.
 ### Steps on how to test the App:
 
 1. To start the application, go to this url: https://gentle-plains-29655.herokuapp.com/,
@@ -30,9 +30,10 @@ To further test the scanner API, follow the steps mentioned under the next heade
 
 4. To delete all documents from collection, you must get to the '/cruder/deleteAll' route and send a DELETE request from postman.
 
-5. To delete one document from collection, you must get to the '/cruder/deleteOne' route and use query params to specify which document to delete. Use the name variable as the key and provide the name of the document you would like to delete.
+5. To delete one document from collection, you must get to the '/cruder/deleteOne' route and use body url-encoded form data to specify which document to delete. Use the name variable as the key and provide the name of the document you would like to delete.
 
 6. To modify a document, return to the '/cruder' route and use a PUT request. Send a query param key and use the variable 'name' to modify the document you want. Use the form-url to set the key value pair to modify the data however you want. Use the same variable keys as before : {name,sex,age,height,weight}.
 
 
 These are strictly RESTful APIs.
+
