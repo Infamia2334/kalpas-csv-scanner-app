@@ -1,0 +1,872 @@
+{
+	"info": {
+		"_postman_id": "c98490d1-35f1-43b0-b609-5e50d3b4b9e3",
+		"name": "kalpas-collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get one document",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "permission",
+						"value": "allow",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://gentle-plains-29655.herokuapp.com/cruder/getOne?name=Carl",
+					"protocol": "https",
+					"host": [
+						"gentle-plains-29655",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"cruder",
+						"getOne"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Carl"
+						}
+					]
+				},
+				"description": "Using getOne to see one of the documents."
+			},
+			"response": [
+				{
+					"name": "get one document",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "permission",
+								"value": "allow",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://gentle-plains-29655.herokuapp.com/cruder/getOne?name=Carl",
+							"protocol": "https",
+							"host": [
+								"gentle-plains-29655",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"cruder",
+								"getOne"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Carl"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Cowboy"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "106"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"6a-wX+Cs1H/2WHaSi+CkJh/KnSv1ZU\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 25 Jun 2021 05:34:12 GMT"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"60d4800a103cb40f38d4f3e2\",\n    \"Name\": \"Carl\",\n    \"Sex\": \"M\",\n    \"Age\": \"32\",\n    \"Height\": \"70\",\n    \"Weight\": \"155\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "get all documents",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "permission",
+						"value": "allow",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://gentle-plains-29655.herokuapp.com/cruder/",
+					"protocol": "https",
+					"host": [
+						"gentle-plains-29655",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"cruder",
+						""
+					]
+				},
+				"description": "Get route for viewing all documentsin db."
+			},
+			"response": [
+				{
+					"name": "get all documents",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "permission",
+								"value": "allow",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://gentle-plains-29655.herokuapp.com/cruder/",
+							"protocol": "https",
+							"host": [
+								"gentle-plains-29655",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"cruder",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Cowboy"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2052"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"804-DJlKv8oWNQPBwYlI/3N2QRhrC9o\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 25 Jun 2021 05:35:30 GMT"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"60d4800a103cb40f38d4f3e2\",\n        \"Name\": \"Carl\",\n        \"Sex\": \"M\",\n        \"Age\": \"32\",\n        \"Height\": \"70\",\n        \"Weight\": \"155\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60d4800a103cb40f38d4f3e6\",\n        \"Name\": \"Gwen\",\n        \"Sex\": \"F\",\n        \"Age\": \"26\",\n        \"Height\": \"64\",\n        \"Weight\": \"121\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60d4800a103cb40f38d4f3e5\",\n        \"Name\": \"Fran\",\n        \"Sex\": \"F\",\n        \"Age\": \"33\",\n        \"Height\": \"66\",\n        \"Weight\": \"115\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60d4800a103cb40f38d4f3ee\",\n        \"Name\": \"Omar\",\n        \"Sex\": \"M\",\n        \"Age\": \"38\",\n        \"Height\": \"70\",\n        \"Weight\": \"145\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60d4800a103cb40f38d4f3e1\",\n        \"Name\": \"Bert\",\n        \"Sex\": \"M\",\n        \"Age\": \"42\",\n        \"Height\": \"68\",\n        \"Weight\": \"166\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60d4800a103cb40f38d4f3ea\",\n        \"Name\": \"Kate\",\n        \"Sex\": \"F\",\n        \"Age\": \"47\",\n        \"Height\": \"69\",\n        \"Weight\": \"139\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60d4800a103cb40f38d4f3e7\",\n        \"Name\": \"Hank\",\n        \"Sex\": \"M\",\n        \"Age\": \"30\",\n        \"Height\": \"71\",\n        \"Weight\": \"158\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60d4800a103cb40f38d4f3ec\",\n        \"Name\": \"Myra\",\n        \"Sex\": \"F\",\n        \"Age\": \"23\",\n        \"Height\": \"62\",\n        \"Weight\": \"98\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60d4800a103cb40f38d4f3e4\",\n        \"Name\": \"Elly\",\n        \"Sex\": \"F\",\n        \"Age\": \"30\",\n        \"Height\": \"66\",\n        \"Weight\": \"124\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60d4800a103cb40f38d4f3e3\",\n        \"Name\": \"Dave\",\n        \"Sex\": \"M\",\n        \"Age\": \"39\",\n        \"Height\": \"72\",\n        \"Weight\": \"167\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60d4800a103cb40f38d4f3eb\",\n        \"Name\": \"Luke\",\n        \"Sex\": \"M\",\n        \"Age\": \"34\",\n        \"Height\": \"72\",\n        \"Weight\": \"163\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60d4800a103cb40f38d4f3e8\",\n        \"Name\": \"Ivan\",\n        \"Sex\": \"M\",\n        \"Age\": \"53\",\n        \"Height\": \"72\",\n        \"Weight\": \"175\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60d4800a103cb40f38d4f3e9\",\n        \"Name\": \"Jake\",\n        \"Sex\": \"M\",\n        \"Age\": \"32\",\n        \"Height\": \"69\",\n        \"Weight\": \"143\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60d4800a103cb40f38d4f3f1\",\n        \"Name\": \"Emily\",\n        \"Sex\": \"F\",\n        \"Age\": \"42\",\n        \"Height\": \"172\",\n        \"Weight\": \"210\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60d4800a103cb40f38d4f3ef\",\n        \"Name\": \"Page\",\n        \"Sex\": \"F\",\n        \"Age\": \"31\",\n        \"Height\": \"67\",\n        \"Weight\": \"135\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60d4800a103cb40f38d4f3ed\",\n        \"Name\": \"Neil\",\n        \"Sex\": \"M\",\n        \"Age\": \"36\",\n        \"Height\": \"75\",\n        \"Weight\": \"160\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60d4800a103cb40f38d4f3e0\",\n        \"Name\": \"Alex\",\n        \"Sex\": \"M\",\n        \"Age\": \"41\",\n        \"Height\": \"74\",\n        \"Weight\": \"170\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60d4800a103cb40f38d4f3f0\",\n        \"Name\": \"Quin\",\n        \"Sex\": \"M\",\n        \"Age\": \"29\",\n        \"Height\": \"71\",\n        \"Weight\": \"176\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60d4ffa53a59a70004820c6b\",\n        \"Name\": \"JEFF\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60d4ffd53a59a70004820c6e\",\n        \"Name\": \"JEFF\",\n        \"Sex\": \"F\",\n        \"__v\": 0\n    }\n]"
+				},
+				{
+					"name": "get all documents",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "permission",
+								"value": "allow",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://gentle-plains-29655.herokuapp.com/cruder/",
+							"protocol": "https",
+							"host": [
+								"gentle-plains-29655",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"cruder",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Cowboy"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2140"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"85c-9QPXwDHbWgVTuIqfJ1tkRa1o4fE\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 25 Jun 2021 05:37:12 GMT"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"60d4800a103cb40f38d4f3e2\",\n        \"Name\": \"Carl\",\n        \"Sex\": \"M\",\n        \"Age\": \"32\",\n        \"Height\": \"70\",\n        \"Weight\": \"155\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60d4800a103cb40f38d4f3e6\",\n        \"Name\": \"Gwen\",\n        \"Sex\": \"F\",\n        \"Age\": \"26\",\n        \"Height\": \"64\",\n        \"Weight\": \"121\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60d4800a103cb40f38d4f3e5\",\n        \"Name\": \"Fran\",\n        \"Sex\": \"F\",\n        \"Age\": \"33\",\n        \"Height\": \"66\",\n        \"Weight\": \"115\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60d4800a103cb40f38d4f3ee\",\n        \"Name\": \"Omar\",\n        \"Sex\": \"M\",\n        \"Age\": \"38\",\n        \"Height\": \"70\",\n        \"Weight\": \"145\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60d4800a103cb40f38d4f3e1\",\n        \"Name\": \"Bert\",\n        \"Sex\": \"M\",\n        \"Age\": \"42\",\n        \"Height\": \"68\",\n        \"Weight\": \"166\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60d4800a103cb40f38d4f3ea\",\n        \"Name\": \"Kate\",\n        \"Sex\": \"F\",\n        \"Age\": \"47\",\n        \"Height\": \"69\",\n        \"Weight\": \"139\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60d4800a103cb40f38d4f3e7\",\n        \"Name\": \"Hank\",\n        \"Sex\": \"M\",\n        \"Age\": \"30\",\n        \"Height\": \"71\",\n        \"Weight\": \"158\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60d4800a103cb40f38d4f3ec\",\n        \"Name\": \"Myra\",\n        \"Sex\": \"F\",\n        \"Age\": \"23\",\n        \"Height\": \"62\",\n        \"Weight\": \"98\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60d4800a103cb40f38d4f3e4\",\n        \"Name\": \"Elly\",\n        \"Sex\": \"F\",\n        \"Age\": \"30\",\n        \"Height\": \"66\",\n        \"Weight\": \"124\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60d4800a103cb40f38d4f3e3\",\n        \"Name\": \"Dave\",\n        \"Sex\": \"M\",\n        \"Age\": \"39\",\n        \"Height\": \"72\",\n        \"Weight\": \"167\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60d4800a103cb40f38d4f3eb\",\n        \"Name\": \"Luke\",\n        \"Sex\": \"M\",\n        \"Age\": \"34\",\n        \"Height\": \"72\",\n        \"Weight\": \"163\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60d4800a103cb40f38d4f3e8\",\n        \"Name\": \"Ivan\",\n        \"Sex\": \"M\",\n        \"Age\": \"53\",\n        \"Height\": \"72\",\n        \"Weight\": \"175\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60d4800a103cb40f38d4f3e9\",\n        \"Name\": \"Jake\",\n        \"Sex\": \"M\",\n        \"Age\": \"32\",\n        \"Height\": \"69\",\n        \"Weight\": \"143\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60d4800a103cb40f38d4f3f1\",\n        \"Name\": \"Emily\",\n        \"Sex\": \"F\",\n        \"Age\": \"42\",\n        \"Height\": \"172\",\n        \"Weight\": \"210\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60d4800a103cb40f38d4f3ef\",\n        \"Name\": \"Page\",\n        \"Sex\": \"F\",\n        \"Age\": \"31\",\n        \"Height\": \"67\",\n        \"Weight\": \"135\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60d4800a103cb40f38d4f3ed\",\n        \"Name\": \"Neil\",\n        \"Sex\": \"M\",\n        \"Age\": \"36\",\n        \"Height\": \"75\",\n        \"Weight\": \"160\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60d4800a103cb40f38d4f3e0\",\n        \"Name\": \"Alex\",\n        \"Sex\": \"M\",\n        \"Age\": \"41\",\n        \"Height\": \"74\",\n        \"Weight\": \"170\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60d4800a103cb40f38d4f3f0\",\n        \"Name\": \"Quin\",\n        \"Sex\": \"M\",\n        \"Age\": \"29\",\n        \"Height\": \"71\",\n        \"Weight\": \"176\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60d4ffa53a59a70004820c6b\",\n        \"Name\": \"JEFF\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60d4ffd53a59a70004820c6e\",\n        \"Name\": \"JEFF\",\n        \"Sex\": \"F\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"60d56b6070fb360004b0d9bf\",\n        \"Name\": \"Clint Eastwood\",\n        \"Sex\": \"M\",\n        \"Age\": \"21\",\n        \"__v\": 0\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Create new document",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "permission",
+						"value": "allow",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Clint Eastwood",
+							"type": "text"
+						},
+						{
+							"key": "sex",
+							"value": "M",
+							"type": "text"
+						},
+						{
+							"key": "age",
+							"value": "21",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://gentle-plains-29655.herokuapp.com/cruder",
+					"protocol": "https",
+					"host": [
+						"gentle-plains-29655",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"cruder"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create new document",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "permission",
+								"value": "allow",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Clint Eastwood",
+									"type": "text"
+								},
+								{
+									"key": "sex",
+									"value": "M",
+									"type": "text"
+								},
+								{
+									"key": "age",
+									"value": "21",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://gentle-plains-29655.herokuapp.com/cruder",
+							"protocol": "https",
+							"host": [
+								"gentle-plains-29655",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"cruder"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Cowboy"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "30"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"1e-Zt4bgTpjBiM0jS9trjEbS3qXJJc\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 25 Jun 2021 05:36:32 GMT"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						}
+					],
+					"cookie": [],
+					"body": "New Biostats Created and Saved"
+				}
+			]
+		},
+		{
+			"name": "Modyfying document.",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "permission",
+						"value": "allow",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "age",
+							"value": "42",
+							"type": "text"
+						},
+						{
+							"key": "height",
+							"value": "172",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://gentle-plains-29655.herokuapp.com/cruder?name=JEFF",
+					"protocol": "https",
+					"host": [
+						"gentle-plains-29655",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"cruder"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "JEFF",
+							"description": "Modifying one document"
+						}
+					]
+				},
+				"description": "Modyfying one document."
+			},
+			"response": [
+				{
+					"name": "Modyfying document.",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "permission",
+								"value": "allow",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "age",
+									"value": "42",
+									"type": "text"
+								},
+								{
+									"key": "height",
+									"value": "172",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://gentle-plains-29655.herokuapp.com/cruder?name=JEFF",
+							"protocol": "https",
+							"host": [
+								"gentle-plains-29655",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"cruder"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "JEFF",
+									"description": "Modifying one document"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Cowboy"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "67"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"43-GJWIX9+3AGr45L4n6iktNYjtP+8\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 25 Jun 2021 05:41:09 GMT"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						}
+					],
+					"cookie": [],
+					"body": "{ _id: 60d4ffa53a59a70004820c6b, Name: 'JEFF', __v: 0 } and Updated"
+				}
+			]
+		},
+		{
+			"name": "Deleting One document, provide the name of the document in the body url-encoded key.",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "permission",
+						"value": "allow",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "JEFF",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://gentle-plains-29655.herokuapp.com/cruder/deleteOne",
+					"protocol": "https",
+					"host": [
+						"gentle-plains-29655",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"cruder",
+						"deleteOne"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Quin",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Deleting One document, provide the name of the document in the body url-encoded key.",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "permission",
+								"value": "allow",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "JEFF",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://gentle-plains-29655.herokuapp.com/cruder/deleteOne",
+							"protocol": "https",
+							"host": [
+								"gentle-plains-29655",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"cruder",
+								"deleteOne"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Quin",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Cowboy"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "30"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"1e-9/PRrdkerO48u0aECDwVmq3dovQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 25 Jun 2021 06:12:43 GMT"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						}
+					],
+					"cookie": [],
+					"body": "Successfully deleted said data"
+				}
+			]
+		},
+		{
+			"name": "Delete all documents from collection",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "permission",
+						"value": "allow",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://gentle-plains-29655.herokuapp.com/cruder/deleteAll",
+					"protocol": "https",
+					"host": [
+						"gentle-plains-29655",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"cruder",
+						"deleteAll"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete all documents from collection",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "permission",
+								"value": "allow",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://gentle-plains-29655.herokuapp.com/cruder/deleteAll",
+							"protocol": "https",
+							"host": [
+								"gentle-plains-29655",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"cruder",
+								"deleteAll"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Cowboy"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "43"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"2b-JMlWBnxBjswopgAFGcXqMs2D3kM\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 25 Jun 2021 06:15:43 GMT"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						}
+					],
+					"cookie": [],
+					"body": "Successfully deleted all Data in COLLECTION"
+				}
+			]
+		},
+		{
+			"name": "Testing the CSV-Scanner API",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "permission",
+						"value": "allow",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "filename",
+							"type": "file",
+							"src": "/C:/Users/Infamia/Downloads/biostats1.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://gentle-plains-29655.herokuapp.com/scanner",
+					"protocol": "https",
+					"host": [
+						"gentle-plains-29655",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"scanner"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Uploading and reading .csv file into database.",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "permission",
+								"value": "allow",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "filename",
+									"type": "file",
+									"src": "/C:/Users/Infamia/Downloads/biostats1.csv"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://gentle-plains-29655.herokuapp.com/scanner",
+							"protocol": "https",
+							"host": [
+								"gentle-plains-29655",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"scanner"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Cowboy"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "215"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"d7-KZChia6WhY1ZHevIfFLgiBstxQo\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 25 Jun 2021 06:17:50 GMT"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"fieldname\": \"filename\",\n    \"originalname\": \"biostats1.csv\",\n    \"encoding\": \"7bit\",\n    \"mimetype\": \"text/csv\",\n    \"destination\": \"uploads/\",\n    \"filename\": \"1624601870567biostats1.csv\",\n    \"path\": \"uploads/1624601870567biostats1.csv\",\n    \"size\": 838\n}"
+				}
+			]
+		}
+	]
+}
