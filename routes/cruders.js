@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const router = express.Router()
 
 
-mongoose.connect("mongodb+srv://admin-dipan:Test123@appcluster.x7nob.mongodb.net/kalpasCSVdb?retryWrites=true&w=majority",  {useNewUrlParser : true, useUnifiedTopology: true})
+mongoose.connect(process.env.DB_URL,  {useNewUrlParser : true, useUnifiedTopology: true})
 const BioStats = require("../models/bioStats")
 
 
